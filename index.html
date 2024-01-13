@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Dự án 7 </title>
+</head>
+<body>
+    <div class="header_menu">
+        <img src="img/logo.png" alt="logo">
+
+        <ul>
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="giới thiệu.html">GIỚI THIỆU</a></li>
+            <li><a href="sản phẩm.html">SẢN PHẨM</a></li>
+            <li><a href="tin tức.html">TIN TỨC</a></li>
+            <li><a href="liên hệ.html">LIÊN HỆ</a></li>
+        </ul>
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="banner_mennu">
+        
+                <div class="content">
+                    <h2>TRÀ ƯỚP SEN TÂY HỒ</h2>
+                    <h1 style="font-style: italic;font-family: 'Caveat', cursive; color: #9eae54; font-size: 4rem;" >Tinh hoa ẩm thực</h1>
+                    <p>Sự hòa quyện tuyệt vời giữa hương thơm ngan ngát của <br>sen Bách diệp Hồ Tây và vi đậm đà của trà Tân Cương</p>
+                    <br>
+                    <button style="font-size: 1.2rem; padding: 5px 2px;width: 200px;background-color: #9eae54;border: 0;">THỬ NGAY</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="banner_mennu1">
+        
+                <div class="content">
+                    <h2>TRÀ ƯỚP SEN TÂY HỒ</h2>
+                    <h1 style="font-style: italic;font-family: 'Caveat', cursive; color: #9eae54; font-size: 4rem;" >Tinh hoa ẩm thực</h1>
+                    <p>Sự hòa quyện tuyệt vời giữa hương thơm ngan ngát của <br>sen Bách diệp Hồ Tây và vi đậm đà của trà Tân Cương</p>
+                    <br>
+                    <button style="font-size: 1.2rem; padding: 5px 2px;width: 200px;background-color: rgb(153, 236, 104);border: 0;">THỬ NGAY</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="banner_mennu2">
+        
+                <div class="content">
+                    <h2>TRÀ ƯỚP SEN TÂY HỒ</h2>
+                    <h1 style="font-style: italic;font-family: 'Caveat', cursive; color: green; font-size: 4rem;" >Tinh hoa ẩm thực</h1>
+                    <p>Sự hòa quyện tuyệt vời giữa hương thơm ngan ngát của <br>sen Bách diệp Hồ Tây và vi đậm đà của trà Tân Cương</p>
+                    <br>
+                    <button style="font-size: 1.2rem; padding: 5px 2px;width: 200px;background-color: rgb(153, 236, 104);border: 0;">THỬ NGAY</button>
+                </div>
+            </div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <div class="content1">
+            <h1>SẢN PHẨM NỔI BẬT</h1>
+        </div> 
+           <div class="container_menu">
+            <div class="container">
+                <img src="img/img1.png" alt="trabongsen">
+                <p>TRÀ ƯỚP BÔNG SEN</p>
+            </div>
+            <div class="container">
+                <img src="img/img2.png" alt="trauopnhisen">
+                <p>TRÀ ƯỚP NHỊ SEN</p>
+            </div>
+            <div class="container">
+                <img src="img/img3.png" alt="trasantuyet">
+                <p>TRÀ SAN TUYẾT</p>
+            </div>
+            <div class="container">
+                <img src="img/img4.png" alt="traolong">
+                <p>TRÀ Ô LONG</p>
+            </div>
+           </div>  
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+        <div class="gt">
+            <h1>GIỚI THIỆU</h1>
+            <div class="content2">
+                <h2 style="font-style: italic;font-family: 'Caveat', cursive; color: #9eae54; font-size: 4rem;" >Trà sen Bách Diệp</h2>
+                <p>Trà ướp Sen Bách Diệp- tinh hoa văn hóa Hà Thành là sự hòa quyện tuyệt vời <br>giữa hương thơm ngan ngát của bông sen Bách diệp Hồ Tây và vị đậm đà của trà <br>Tân Cương Thái Nguyên.Qua đôi bàn tay tài hòa và bí quyết nghề mật truyền <br>nhiều đời của người thợ trà Thăng Long,tạo ra thức quà tinh túy,kết tinh văn hóa <br>ngàn năm Thăng Long - Hà Nội.</p>
+                <br>
+                <button style="font-size: 1.2rem; padding: 5px 2px;width: 200px;background-color: #9eae54;border: 0;">ĐỌC THÊM</button>
+                <span class="sdt">
+                    <i class="fa-solid fa-phone"></i>
+                    0123.456.789
+                </span>
+                <img class="hh" src="img/img-left.png" alt="img-left">
+            </div>
+        </div>
+        <div class="bg">
+            <div class="nntd">
+                <h1>NGHỆ NHÂN TRÀ ĐÀO</h1>
+            </div>
+            <div class="anhdaidien">
+                <div class="ten">
+                    <img src="img/ava1.png" alt="ảnh đại diện">
+                    <h3>Nn.Nguyễn Cao Sơn</h3>
+                    <p style="font-size: 12px;">Nguyễn Cao Sơn được chọn làm đại <br>diện quảng bá văn hóa Trà Việt tại <br>ngôi nhà di sản 87 Mã Mây,Hà Nội.</p>
+                </div>
+                <div class="ten">
+                    <img src="img/ava2.png" alt="ảnh đại diện">
+                    <h3>Nn.Nguyễn Cao Sơn</h3>
+                    <p style="font-size: 12px;">Tryền nhân đời thứ 6 của dòng trà <br>Trường Xuân,Hà Nội chia sẻ về nghệ <br>thuật trà đạo,lĩnh vực mà anh dành<br>hơn nữa cuộc đời nghiên cứu một cách <br>đam mê.</p>
+                </div>
+                <div class="ten">
+                    <img src="img/ava3.png" alt="ảnh đại diện">
+                    <h3>Nn.Nguyễn Cao Sơn</h3>
+                    <p style="font-size: 12px;">Vẫn tự tay chọn hoa,tách gạo,thực <br>hiện từng công đoạn ướp trà sen.Cũng <br>chính bởi nghiện trà,bởi yêu nghề nên <br>cô thiếu nữ Hà thành năm xưa vẫn say <br>hương vị trà sen Tây Hồ.</p>
+                </div>
+                <div class="ten">
+                    <img src="img/ava4.png" alt="ảnh đại diện">
+                    <h3>Nn.Nguyễn Cao Sơn</h3>
+                    <p style="font-size: 12px;">Vô địch toàn thế giới trong cuộc thi <br>Tea Master Cup International 2018 về <br>pha trà được tổ chức tại Huế.</p>
+                </div>
+                <div class="ten">
+                    <img src="img/ava5.png" alt="ảnh đại diện">
+                    <h3>Nn.Nguyễn Cao Sơn</h3>
+                    <p style="font-size: 12px;">Sinh ra và lớn lên trong một gia đình <br>quý tộc phong kiến,trong một môi <br>trường mà việc uống trà và trà cực <br>ngon,cực thượng hạng là điều không <br>bao giờ thiếu trong nhà.</p>
+                </div>
+            </div>
+            <div class="mn">
+                <h1>MUA NGAY</h1>
+            </div>
+            <div class="content_in">
+                <input placeholder="Số điện thoại/Email">
+                <button style="font-size: 1rem; padding: 5px 2px;width: 200px;background-color: #9eae54;border: 0;height: 40px;">GỬI</button>
+            </div>
+        </div>
+        <footer>
+            <div class="footer_menu">
+                <div class="footer_container">
+                    <img src="img/logo.png" alt="logo">
+                    <p><strong>Số Điện Thoại: </strong>7999.999.999</p>
+                    <p><strong>Email: </strong>trasenbachdiep@gmail.com</p>
+                    <p><strong>Địa Chỉ: </strong>Số 12,Quảng An,Hồ Tây,Hà Nội</p>
+                </div>
+                <div class="footer_container1">
+                    <h2>VỀ CHÚNG TÔI</h2>
+                    <p>Giới thiệu</p>
+                    <p>Sản phẩm</p>
+                    <p>Tin tức</p>
+                </div>
+                <div class="footer_container2">
+                    <h2>LIÊN HỆ</h2>
+                    <div class="icon">
+                        <i class="fa-brands fa-youtube" style=" font-size: 2rem;"> </i>
+                        <i class="fa-brands fa-instagram" style="font-size: 2rem;"></i>
+                        <i class="fa-brands fa-square-facebook" style="font-size: 2rem;"></i>
+                    </div>
+
+                    <p>Copyright@2010-2020</p>
+                    <p>Tra Sen Bach Diep All right reserved</p>
+                </div>
+            </div>
+        </footer>   
+</body>
+</html>
